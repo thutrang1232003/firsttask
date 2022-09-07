@@ -1,0 +1,350 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Khai báo font chữ */
+@font-face {
+    font-family: French-vanilla;
+    src: url(../font/French-vanilla/frenchvanillaitalic.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../font/Montserrat/static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Medium;
+    src: url(../font/Montserrat/static/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url(../font/Montserrat/static/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(../font/Montserrat/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: PlayfairDisplay-Bold;
+    src: url(../font/Playfair_Display/static/PlayfairDisplay-Bold.ttf);
+}
+
+@font-face {
+    font-family: PlayfairDisplay-Regular;
+    src: url(../font/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: Myriad Pro-Regular;
+    src: url(../font/MyriadPro/MYRIADPRO-REGULAR.OTF);
+}
+
+/* Khai báo biến */
+:root {
+    --primary-color: #a67c52;
+    --second-color: #fff;
+    --third-color:#391a0f;
+    --forth-color: #816e5c;
+    --fifth-color: #d39441;
+}
+
+/* Kế thừa */
+body {
+    font-family: Montserrat-Regular;
+}
+
+/* Dùng chung */
+button {
+    font-size: 15px;
+    font-family: Montserrat-SemiBold;
+    height: 34px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* HEADER */
+/* Media */
+.header {
+    position: relative;
+}
+
+.header .row {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header .row .col-left {
+    width: 60%;
+    font-size: 45px;
+    font-family: French-vanilla;
+    padding-left: 247px;
+    color:var(--third-color);
+}
+
+.header .row .col-left marquee {
+    vertical-align: middle;
+}
+
+.header .row .col-right {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.header .row .col-right ul {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.header .row .col-right ul li {
+    display: inline-block;
+    list-style: none;
+    padding-right: 9px;
+}
+
+.fa-brands {
+    color: var(--primary-color);
+    font-size: 40px;
+}
+
+.fa-solid {
+    color: var(--primary-color);
+    font-size: 15px;
+}
+
+.header .row .col-right button {
+    color:var(--second-color);
+    background-image: linear-gradient(to right, rgba(173,123,51,0),rgba(173,123,51,1));
+    
+}
+.header .row .col-right span {
+    display: inline-block;
+    padding-left: 9px;
+}
+
+.header .row .col-right span a {
+    color: var(--primary-color);
+    font-size: 16px;
+    font-family: Montserrat-SemiBold;
+}
+
+/* Logo */
+.header .logo a {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    z-index: 3;
+}
+
+/* Navbar */
+/* Note: khi mún menu đè lên hình thì dùng position absolute cho menu, lúc đó hình sẽ thế vào chỗ trống của menu trước đó. Dùng position absolute thì element bên dưới có xu hướng trồi lên chiếm chỗ element có position absolute */
+.header .menu .navbar {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    line-height: 48px;
+    background-color: rgb(57, 26, 15,0.8);
+}
+
+.header .navbar .nav-item {
+    padding-left: 31px;
+    padding-right: 31px;
+    color: var(--primary-color);
+}
+
+.header .navbar .nav-item .nav-link {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: PlayfairDisplay-Regular;
+    ;
+}
+
+/* MAIN */
+/* Carousel */
+.carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.carousel-indicators li.active {
+    background-color: var(--fifth-color);
+}
+
+/* Introduction */
+.introduction {
+    padding-top: 70px;
+    background-image: url(../images/gioithieu-banner1.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.introduction .row img {
+    width: 100%;
+}
+
+.introduction .row div:nth-child(2) {
+    padding-left: 35px;
+    padding-right: 0;
+    padding-top: 60px;
+    padding-bottom: 135px;
+}
+
+.introduction .row div:nth-child(2) h2 {
+    font-family: Myriad Pro;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--forth-color);
+}
+
+.introduction .row div:nth-child(2) h1 {
+    font-family: PlayfairDisplay-Regular;
+    font-size: 48px;
+    color: var(--fifth-color);
+    margin-bottom: 20px;
+}
+
+.introduction .row div:nth-child(2) p {
+    width: 380px;
+    font-size: 14px;
+    font-family: Myriad Pro;
+    color: var(--forth-color);
+    padding-bottom: 26px;
+}
+
+.introduction .row div:nth-child(2) a {
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    color: var(--fifth-color);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--fifth-color);
+    text-decoration: none;
+}
+
+/* Services */
+.services {
+    padding-top: 55px;
+    padding-bottom: 69px;
+}
+
+.services h3 {
+    font-family: Montserrat-SemiBold;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--third-color);
+    padding-bottom: 10px;
+}
+
+.services > h2 {
+    font-family: PlayfairDisplay-Bold;
+    font-size: 30px;
+    color: #c27d24;
+    background-image: url(../images/2dashes.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+.services .row.row-1 {
+    margin-bottom: 40px;
+}
+
+.services .row img {
+    width: 100%;
+}
+
+.services .row h2 {
+    font-family: PlayfairDisplay-Bold;
+    font-size: 36px;
+    color: var(--third-color);
+    margin-bottom: 17px;
+}
+
+.services .row h6 {
+    height: 46px;
+    line-height: 46px;
+    font-family: Montserrat-SemiBold;
+    font-size: 18px;
+    color: #1d1d1d;
+    padding-left: 20px;
+    border-top: 2px solid #252525;
+    position: relative;
+}
+
+.services .row h6 .fa-solid {
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--third-color);
+    
+}
+
+.services .row.row-2 {
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+.services .row .content {
+    display: none;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.services .row .content p {
+    font-size: 13px;
+    margin-bottom: 27px;
+}
+
+.services .row .content > span {
+    font-size: 16px;
+    color: #ae800e;
+}
+
+.services .row .content i {
+    display: inline-block;
+    padding-left: 14px;
+    padding-right: 10px;
+}
+
+.services .row .content span span {
+    display: inline;
+    font-family: Montserrat-Bold;
+    padding-left: 9px;
+}
+
+.services .row .content button {
+    font-family: Montserrat-Bold;
+    text-transform: uppercase;
+    background-color: #2d2625;
+    color: #f0d38a;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    
+}
+
